@@ -1,0 +1,75 @@
+#root {
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    left: var(--popup-left, 0px);
+    top: var(--popup-top, 0px);
+    padding: 0 1em 0 1em;
+    font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+    background: #fff;
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, .3);
+    color: #333;
+    z-index: 999999;
+    overflow-y: scroll;
+}
+
+#root[data-above="true"][data-right="true"] {
+    transform: translate(-100%, -100%);
+}
+
+#root[data-above="true"] {
+    transform: translateY(-100%);
+}
+
+#root[data-right="true"] {
+    transform: translateX(-100%);
+}
+
+.cat-button {
+    position: absolute;
+    left: var(--popup-left, 0px);
+    top: var(--popup-top, 0px);
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid #1d1b1b;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cat-button[data-above="true"][data-right="true"] {
+    transform: translate(-100%, -100%);
+}
+
+.cat-button[data-above="true"] {
+    transform: translateY(-100%);
+}
+
+.cat-button[data-right="true"] {
+    transform: translateX(-100%);
+}
+
+.logo {
+    height: 5em;
+    margin: -1em -5em -2em 0;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.prompt {
+    font-size: 0.7em;
+}
+
+.breakdown {
+    font-size: 1em;
+}
+
+.translation {
+    font-size: 1em;
+}
